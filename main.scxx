@@ -3,8 +3,10 @@
 # Made by SandoreX
 # https://git{la,hu}b.com/sandorex
 
+# cut off shebang and pipe to g++
 tail -n+2 $0 | g++ $@ -o $0.out -xc++ -
 
+# exit before trying to run c++
 exit 1
 # endif
 
