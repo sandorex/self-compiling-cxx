@@ -1,0 +1,15 @@
+#!/bin/bash
+# Made by SandoreX
+# https://github.com/sandorex
+
+perl -nle "print if /\/\/ --- \/\/ COMMENT \/\/ --- \/\//..0" $0 | g++ $@ -o $0.out -xc++ -
+
+: \
+//;: << '// --- // COMMENT // --- //'
+#include <iostream>
+
+int main() {
+	std::cout << "hello${VAR}\n";
+	return 0;
+}
+// --- // COMMENT // --- //
