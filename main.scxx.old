@@ -1,13 +1,13 @@
 #!/bin/bash
-# if 0
 # Made by SandoreX
 # https://git{la,hu}b.com/sandorex
 
-tail -n+2 $0 | g++ $@ -o $0.out -xc++ -
+perl -nle "print if /^\/\/ --- CODE --- \/\//..0" $0 \
+		  | g++ $@ -o $0.out -xc++ -
 
 exit 1
-# endif
-
+: \
+// --- CODE --- //
 #include <iostream>
 
 int main() {
