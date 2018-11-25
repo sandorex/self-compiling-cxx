@@ -7,7 +7,7 @@
 tail -n+2 $0 | g++ $@ -o $0.out -xc++ -
 
 # exit before trying to run c++
-exit 1
+exit
 # endif
 
 #include <iostream>
