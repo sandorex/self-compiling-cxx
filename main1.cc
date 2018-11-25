@@ -1,13 +1,14 @@
-#!/bin/bash
+# if 0
 # Made by SandoreX
 # https://git{la,hu}b.com/sandorex
 
-perl -nle "print if /^\/\/ --- CODE --- \/\//..0" $0 \
-		  | g++ $@ -o $0.out -xc++ -
+# compile the file
+g++ $@ -o $0.out -xc++ $0
 
-exit 1
-: \
-// --- CODE --- //
+# exit before trying to run c++
+exit
+# endif
+
 #include <iostream>
 
 int main() {
